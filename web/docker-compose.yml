@@ -1,4 +1,4 @@
-version: '3'
+version: '3.9'
 
 services:
   testimony:
@@ -38,4 +38,6 @@ services:
 
 networks:
   web:
+    name: web 
     driver: overlay
+    external: true
