@@ -70,6 +70,19 @@ http://10.211.55.35:80
 
 ```
 
+## Ports
+
+| Port  | Application                            |
+|-------|----------------------------------------|
+| 80    | HAProxy connected to web.              |
+| 5000  | Registry                               |
+| 8000  | Portainer                              |
+| 8080  | Miniswarm vis (when started)           |
+| 8081  | Matomo UI                              |
+| 9000  | Portainer UI                           |
+| 3000? | Web app (autoallocated)                |
+
+
 ## Portainer
 
 This adds management capabilities to the Docker Swarm. If you connect to the port 9000:
@@ -89,3 +102,7 @@ miniswarm vis
 ```
 
 ![miniswarm vis](./images/vis.png)
+
+# TODO
+
+* Seems that registry stack needs a named volume
