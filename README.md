@@ -13,16 +13,16 @@ Enter the manager:
 
 `eval (docker-machine env ms-manager0)`
 
-# Build
+# Stacks
+
+Each stack have a start script and, sometimes, also a build script. For example:
 
 ```
 cd web
 ./build.sh
 ```
 
-This will start a registry service and push a testimony image.
-
-# Start
+This will build the web image and push it to the registry service. In the same directory you can:
 
 ```
 ./start.sh
@@ -69,3 +69,23 @@ http://10.211.55.35:80
 <h1>I'm on c7072d8f748d</h1>⏎
 
 ```
+
+## Portainer
+
+This adds management capabilities to the Docker Swarm. If you connect to the port 9000:
+
+![Portainer Installation](./images/portainer-1.png)
+
+![Portainer Home](./images/portainer-2.png)
+
+![Portainer Cluster Visualizer](./images/portainer-3.png)
+
+## Miniswarm vis
+
+A simpler visualizer is integrated with miniswarm:
+
+```
+miniswarm vis
+```
+
+![miniswarm vis](./images/vis.png)
